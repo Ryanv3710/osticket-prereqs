@@ -19,7 +19,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Links:</h2>
 <p>osTicket installation files:</p>
 <a href="https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6">Installation files</a>
-<h2>Extensive outline of the steps required for successful osTicket setup</h2>
+<h2>Descriptive outline of the steps required for successful osTicket setup</h2>
 
 1. Create the Resoure Group in Azure
   <ul>
