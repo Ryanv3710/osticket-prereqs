@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
+<h1>osTicket - Pre-Installation</h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
 
@@ -58,7 +58,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
   </ul>
   </br>
   
-  3. RDP to Windows Server & install files (pre-install)
+  3. RDP to Windows Server & install files 
 
   <ul>
   <li>Open: <a href="https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6">Installation files</a></li>
@@ -145,32 +145,56 @@ This tutorial outlines the prerequisites and installation of the open-source hel
   <li>Notes:</li>
     <ul>
       <li>Browse to your help desk login page: <a href="http://localhost/osTicket/scp/login.php">http://localhost/osTicket/scp/login.php</a>/li>
-      <li>End Users osTicket URL: <a href="http://localhost/osTicket/">http://localhost/osTicket/</a>
+      <li>End Users osTicket URL: <a href="http://localhost/osTicket/">http://localhost/osTicket/</a></li>
   </ul>
   </ul>
 
-<h2>Installation Steps</h2>
+<h2>Visual demonstration of Pre-Installation</h2>
+</br>
 
+<h3>1. Create the Resoure Group in Azure</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/sxb9slz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In the main menu you'll see "azure services" click resource group. Now is where we will name our resource group & select the region, you want it in the region you are in based on your vicinity but if you choose another one just make sure you take note of not only the region but the name of your resource group in your notepad notes.
 </p>
 <br />
 
+<h3>2. Create Virtual Machine in Azure</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mnEv5lc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Your resource group may take time to load but you will be notified when it successfully got created. Meanwhile, you can still create your virtual machine in windows while you wait. To create the virtual machine go to the search bar and type "virtual machine" or in the web browser you can copy and paste this "https://portal.azure.com" which will take you back to the main menu. 
+</p>
+
+<img src="https://i.imgur.com/cfQ3dXw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+  Now, put your virtual machine in the resource you created. In my case (RG-osTicket) then name your VM & ensure it is in the same region as your resource group. Also you will create the VM in windows 10, make sure it has 2-4 vcpu's. Finally, create your username/password and agree to the terms.
+  </p>
+<br />
+<img src="https://i.imgur.com/hBqKWO0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+  Review information & then create the VM
+  </p>
+<p>
+  
+  </br>
+  
+  <h3>3. RDP to Windows Server & install files</h3>
+  <p>
+<img src="https://i.imgur.com/i2nPzxM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Go back to your VM machine & locate the public IP address and copy it. This is the IP address you will use to remotely connect to the windows machine. To do so, in your task bar search bar type in "renmote desktop connection" click it and then take the copied IP address & paste it into the RDC. Remember the username and password you created when creating the vM? those are the credentials you'll use to log into the VM.
 </p>
 <br />
+<p>
+<img src="https://i.imgur.com/z57neVz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+  We need to enable CGI so to do so,  Control panel -> programs -> turn windows features on or off -> IIS -> World Wide Web Services -> Application Development features -> [x] CGI. in a separate window if you type the ip '127.0.0.1' it should load a blue page with icons but at the top it says Internet Information Services.
+
+  </p>
