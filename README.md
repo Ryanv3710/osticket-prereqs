@@ -184,17 +184,83 @@ Your resource group may take time to load but you will be notified when it succe
   
   <h3>3. RDP to Windows Server & install files</h3>
   <p>
+  
 <img src="https://i.imgur.com/i2nPzxM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Go back to your VM machine & locate the public IP address and copy it. This is the IP address you will use to remotely connect to the windows machine. To do so, in your task bar search bar type in "renmote desktop connection" click it and then take the copied IP address & paste it into the RDC. Remember the username and password you created when creating the vM? those are the credentials you'll use to log into the VM.
 </p>
-<br />
+
 <p>
 <img src="https://i.imgur.com/z57neVz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <p>
   We need to enable CGI so to do so,  Control panel -> programs -> turn windows features on or off -> IIS -> World Wide Web Services -> Application Development features -> [x] CGI. in a separate window if you type the ip '127.0.0.1' it should load a blue page with icons but at the top it says Internet Information Services.
+
+  </p>
+
+<p>
+<img src="https://i.imgur.com/PUAVeIq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+ 
+Now we can start to download the files from the Installation Folder & be able to maneuver to different directories or create directories. First, we are going to download and install "PHP Manager for IIS" do not make any changes to installion setup just click next & agree to the terms. 
+  </p>
+  
+
+<img src="https://i.imgur.com/4jzPw4T.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+<p>
+ Next from the installation folder we are going to download and install the "Rewrite Module"
+
+  </p>
+  
+
+<img src="https://i.imgur.com/1CikBSA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<p>
+ Going back to the Installation Folder locate "PHP 7.3.8" download the file. As that is downloading go to your C drive in your folder and create a folder called "C:\PHP" Once the file downloads we are going to unzip or extract all the contents in the PHP 7.3.8 into the C:\PHP folder. 
+
+  </p>
+  
+  <p>
+  NOTE: if when the file downloads and gives you a trust error, in the downloads locate the file and click the 3 dots next to it to which it will have an option "keep" click keep and then click "keep anyway" after which will allow you to continue with unzipping the file.
+  </p>
+  
+   
+<p>
+<img src="https://i.imgur.com/1CikBSA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+ Going back to the Installation Folder locate "PHP 7.3.8" download the file. As that is downloading go to your C drive in your folder and create a folder called "C:\PHP" Once the file downloads we are going to unzip or extract all the contents in the PHP 7.3.8 into the C:\PHP folder. 
+
+  </p>
+  <p>
+  <img src="https://i.imgur.com/njykJeJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+In the Installation Files locate VC redist.x86.exe. and download and install the file.
+  </p>
+  
+ 
+  <img src="https://i.imgur.com/QzE83dK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p>
+From Installation Folder locate,download,and install MySQL 5.5.62
+  <ul>
+    <li>Typical setup</li>
+    <li>Launch Configuration Wizard (after install)</li>
+    <li>Standard configuration </li>
+    <li>Password1 (create a password but take note)</li>
+    </ul>
 
   </p>
