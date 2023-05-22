@@ -264,3 +264,31 @@ From Installation Folder locate,download,and install MySQL 5.5.62
     </ul>
 
   </p>
+  
+  
+  <p>
+<img src="https://i.imgur.com/uzvopTh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Open IIS as an admin & go back to the installation folder to download Install osTicket v1.15.8. Once it downloads copy and paste the "upload" folder within c:\inetpub\wwwroot, and rename the upload folder to "osTicket" Then you'll go to Go to sites -> Default -> osTicket. On the right click browse *.80
+</p>
+
+<p>
+  Go back to IIS, sites -> Default -> osTicket, double click PHP Manager and enable these extensions.
+  </p>
+  
+  <ul>
+  <li>php_imap.dll</li>
+    <li>php_intl.dll</li>
+    <li> php_opcache.dll</li>
+    <li>Refresh the osticket in your browser and observe the changes</li>
+  </ul>
+  
+  
+   <p>
+<img src="https://i.imgur.com/Y0wzmPN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Go back to installation Folder & install Heidi SQL. Create a new session and connect to the session & create a database called osTicket. Go back to osTicket in browser and apply the database,user,pass to the required fields and then continue and bam! you have successfuly installed osTicket 👍 All thats left is to go back to C:\inetpub\wwwroot\osTicket\setup & delete setup. After that configure the os-config.php to read only.
+</p>
+  
