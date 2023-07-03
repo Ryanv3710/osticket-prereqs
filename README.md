@@ -163,13 +163,13 @@ In the main menu you'll see "azure services" click resource group. Now is where 
 
 <h3>2. Create Virtual Machine in Azure</h3>
 <p>
-<img src="https://i.imgur.com/mnEv5lc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mnEv5lc.png" height="100%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Your resource group may take time to load but you will be notified when it successfully got created. Meanwhile, you can still create your virtual machine in windows while you wait. To create the virtual machine go to the search bar and type "virtual machine" or in the web browser you can copy and paste this "https://portal.azure.com" which will take you back to the main menu. 
 </p>
 
-<img src="https://i.imgur.com/cfQ3dXw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cfQ3dXw.png" height="100%" width="80%" alt="Disk Sanitization Steps"/>
 <p>
   Now, put your virtual machine in the resource you created. In my case (RG-osTicket) then name your VM & ensure it is in the same region as your resource group. Also you will create the VM in windows 10, make sure it has 2-4 vcpu's. Finally, create your username/password and agree to the terms.
   </p>
